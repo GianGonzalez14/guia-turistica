@@ -12,6 +12,19 @@ import androidx.compose.ui.unit.sp
 import androidx.compose.ui.tooling.preview.Preview
 
 @Composable
+fun BotonMenu(texto: String) {
+    Button(
+        onClick = { /* Aquí pondrás la navegación futura */ },
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(vertical = 8.dp),
+        shape = RoundedCornerShape(8.dp)
+    ) {
+        Text(texto)
+    }
+}
+
+@Composable
 fun InterfazDeInicio() {
     Column(
         modifier = Modifier
@@ -19,6 +32,7 @@ fun InterfazDeInicio() {
             .padding(16.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
+        // Título
         Text(
             text = "Guía Turística",
             fontSize = 24.sp,
@@ -34,19 +48,6 @@ fun InterfazDeInicio() {
         BotonMenu("Acceder a enlaces Web")
         BotonMenu("Mapa de ubicación")
         BotonMenu("Contactar Soporte")
-    }
-}
-
-@Composable
-fun BotonMenu(texto: String) {
-    Button(
-        onClick = { /* Aquí pondrás la navegación futura */ },
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(vertical = 8.dp),
-        shape = RoundedCornerShape(8.dp)
-    ) {
-        Text(texto)
     }
 }
 

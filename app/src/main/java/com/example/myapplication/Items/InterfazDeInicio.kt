@@ -9,12 +9,12 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.NavController
 
 @Composable
-fun BotonMenu(texto: String) {
+fun BotonMenu(texto: String, onClick: () -> Unit) {
     Button(
-        onClick = { /* Aquí pondrás la navegación futura */ },
+        onClick = onClick,
         modifier = Modifier
             .fillMaxWidth()
             .padding(vertical = 8.dp),
@@ -25,14 +25,13 @@ fun BotonMenu(texto: String) {
 }
 
 @Composable
-fun InterfazDeInicio() {
+fun InterfazDeInicio(navController: NavController) {
     Column(
         modifier = Modifier
             .fillMaxSize()
             .padding(16.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        // Título
         Text(
             text = "Guía Turística",
             fontSize = 24.sp,
@@ -40,19 +39,12 @@ fun InterfazDeInicio() {
             modifier = Modifier.padding(vertical = 16.dp)
         )
 
-        // Lista de botones
-        BotonMenu("Buscar destino turístico")
-        BotonMenu("Ver Fotos")
-        BotonMenu("Ver Videos")
-        BotonMenu("Ver Perfil")
-        BotonMenu("Acceder a enlaces Web")
-        BotonMenu("Mapa de ubicación")
-        BotonMenu("Contactar Soporte")
+        BotonMenu("Buscar destino turístico") { /* futuro */ }
+        BotonMenu("Ver Fotos") { navController.navigate("ver_fotos") }
+        BotonMenu("Ver Videos") { /* futuro */ }
+        BotonMenu("Ver Perfil") { /* futuro */ }
+        BotonMenu("Acceder a enlaces Web") { /* futuro */ }
+        BotonMenu("Mapa de ubicación") { /* futuro */ }
+        BotonMenu("Contactar Soporte") { /* futuro */ }
     }
-}
-
-@Preview(showBackground = true)
-@Composable
-fun InterfazDeInicioPreview() {
-    InterfazDeInicio()
 }

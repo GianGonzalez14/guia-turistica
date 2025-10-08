@@ -1,4 +1,4 @@
-package com.example.myapplication.Items
+package com.example.myapplication.items
 
 import androidx.compose.foundation.Image
 import androidx.compose.ui.tooling.preview.Preview
@@ -17,7 +17,7 @@ import androidx.compose.ui.window.Dialog
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun FotosScreen() {
+fun VerFotosScreen() {
     Scaffold(
         topBar = {
             TopAppBar(
@@ -85,11 +85,11 @@ fun FotoList(modifier: Modifier = Modifier) {
     }
 }
 
-//pendiente que desctipciones de imagenes si se decide colocar
+//pendiente que descripciones de imagenes si se decide colocar
 
 
 @Preview(showBackground = true, showSystemUi = true)
 @Composable
-fun FotosScreenPreview() {
-    FotosScreen()
+fun VerFotosScreenPreview() {
+    VerFotosScreen()
 }

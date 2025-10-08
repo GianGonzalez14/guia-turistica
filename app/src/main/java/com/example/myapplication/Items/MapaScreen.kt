@@ -1,4 +1,4 @@
-package com.example.myapplication.Items
+package com.example.myapplication.items
 
 import android.content.Intent
 import androidx.compose.ui.tooling.preview.Preview
@@ -19,7 +19,7 @@ import com.example.myapplication.R
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun MapaScreen() {
+fun VerMapaScreen() {
     val context = LocalContext.current
 
     Scaffold(
@@ -81,6 +81,6 @@ fun MapaScreen() {
 
 @Preview(showBackground = true)
 @Composable
-fun PreviewMapaScreen() {
-    MapaScreen()
+fun MapaScreenPreview() {
+    VerMapaScreen()
 }

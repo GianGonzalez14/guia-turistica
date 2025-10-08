@@ -39,12 +39,12 @@ fun InterfazDeInicio(navController: NavController) {
             modifier = Modifier.padding(vertical = 16.dp)
         )
 
-        BotonMenu("Buscar destino turístico") { /* futuro */ }
+        BotonMenu("Buscar destino turístico") { navController.navigate("buscar_destino") }
         BotonMenu("Ver Fotos") { navController.navigate("ver_fotos") }
-        BotonMenu("Ver Videos") { /* futuro */ }
-        BotonMenu("Ver Perfil") { /* futuro */ }
-        BotonMenu("Acceder a enlaces Web") { /* futuro */ }
-        BotonMenu("Mapa de ubicación") { /* futuro */ }
-        BotonMenu("Contactar Soporte") { /* futuro */ }
+        BotonMenu("Ver Videos") { navController.navigate("ver_videos") }
+        BotonMenu("Ver Perfil") { navController.navigate("ver_perfil") }
+        BotonMenu("Acceder a enlaces Web") { navController.navigate("enlaces_web") }
+        BotonMenu("Mapa de ubicación") { navController.navigate("mapa_ubicacion") }
+        BotonMenu("Contactar Soporte") { navController.navigate("contactar_soporte") }
     }
 }
